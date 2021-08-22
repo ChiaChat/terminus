@@ -4,7 +4,7 @@ plugins {
 
 
 group = "org.chiachat.terminus"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 kotlin {
     jvm {

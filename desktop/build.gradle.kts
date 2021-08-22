@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "org.chiachat.terminus"
-version = "1.0"
+version = "0.0.1"
 
 dependencies {
     implementation(compose.desktop.currentOs)

@@ -1,27 +1,24 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    id("kotlin-android-extensions")
+    id("org.jetbrains.compose")
 }
 
 group = "org.chiachat"
-version = "1.0"
+version = "1.0.0"
 
 dependencies {
-    implementation(project(":mobile"))
-    implementation("com.google.android.material:material:1.2.1")
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.2")
+    implementation(project(":core"))
 }
 
 android {
-    compileSdkVersion(29)
+    compileSdkVersion(31)
     defaultConfig {
-        applicationId = "org.chiachat.terminus.android"
+        applicationId = "org.chiachat.kchia.android"
         minSdkVersion(24)
-        targetSdkVersion(29)
+        targetSdkVersion(31)
         versionCode = 1
-        versionName = "1.0"
+        versionName = version.toString()
     }
     buildTypes {
         getByName("release") {
