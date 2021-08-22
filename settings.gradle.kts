@@ -14,4 +14,5 @@ include(":mobile")
 include(":android")
 include(":desktop")
 include(":web")
+include(":kchia")
 

@@ -1,4 +1,4 @@
-package com.abysl.terminus.mobile
+package org.chiachat.terminus.mobile
 
 import kotlin.test.Test
 import kotlin.test.assertTrue

@@ -1,4 +1,4 @@
-package com.abysl.terminus
+package org.chiachat.terminus
 
 actual object Platform {
     actual fun getPlatform(): String = "Web"

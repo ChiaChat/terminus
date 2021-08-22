@@ -1,4 +1,4 @@
-package com.abysl.terminus
+package org.chiachat.terminus
 
 expect object Platform {
     fun getPlatform(): String

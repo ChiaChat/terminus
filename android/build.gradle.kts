@@ -4,7 +4,7 @@ plugins {
     id("kotlin-android-extensions")
 }
 
-group = "com.abysl"
+group = "org.chiachat"
 version = "1.0"
 
 dependencies {
@@ -17,7 +17,7 @@ dependencies {
 android {
     compileSdkVersion(29)
     defaultConfig {
-        applicationId = "com.abysl.terminus.android"
+        applicationId = "org.chiachat.terminus.android"
         minSdkVersion(24)
         targetSdkVersion(29)
         versionCode = 1

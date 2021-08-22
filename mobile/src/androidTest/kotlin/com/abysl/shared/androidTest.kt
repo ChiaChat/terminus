@@ -1,4 +1,4 @@
-package com.abysl.terminus.mobile
+package org.chiachat.terminus.mobile
 
 import org.junit.Assert.assertTrue
 import org.junit.Test

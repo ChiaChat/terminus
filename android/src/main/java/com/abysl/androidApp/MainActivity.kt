@@ -1,8 +1,8 @@
-package com.abysl.terminus.android
+package org.chiachat.terminus.android
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.abysl.terminus.mobile.Greeting
+import org.chiachat.terminus.mobile.Greeting
 import android.widget.TextView
 
 fun greet(): String {

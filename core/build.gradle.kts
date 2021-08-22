@@ -3,7 +3,7 @@ plugins {
 }
 
 
-group = "com.abysl.terminus"
+group = "org.chiachat.terminus"
 version = "1.0-SNAPSHOT"
 
 kotlin {
@@ -22,15 +22,6 @@ kotlin {
             }
         }
     }
-    val hostOs = System.getProperty("os.name")
-    val isMingwX64 = hostOs.startsWith("Windows")
-    val nativeTarget = when {
-        hostOs == "Mac OS X" -> macosX64("native")
-        hostOs == "Linux" -> linuxX64("native")
-        isMingwX64 -> mingwX64("native")
-        else -> throw GradleException("Host OS is not supported in Kotlin/Native.")
-    }
-
 
     iosArm64 {
         binaries {
@@ -48,10 +39,11 @@ kotlin {
     }
     sourceSets {
         val commonMain by getting {
-//            dependencies {
+            dependencies {
+                api(project(":kchia"))
 //                api("io.github.matrixkt:client:0.1.5")
 //                api("io.github.matrixkt:olm:0.1.5")
-//            }
+            }
         }
         val commonTest by getting {
             dependencies {
@@ -62,8 +54,6 @@ kotlin {
         val jvmTest by getting
         val jsMain by getting
         val jsTest by getting
-        val nativeMain by getting
-        val nativeTest by getting
         val iosArm64Main by getting
         val iosArm64Test by getting
         val iosX64Main by getting

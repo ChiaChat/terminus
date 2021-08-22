@@ -7,7 +7,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.window.singleWindowApplication
-import com.abysl.terminus.Platform
+import org.chiachat.terminus.Platform
 
 fun main() = singleWindowApplication {
     var text by remember { mutableStateOf("Hello, World!") }

@@ -1,4 +1,4 @@
-package com.abysl.terminus.mobile
+package org.chiachat.terminus.mobile
 
 
 import platform.UIKit.UIDevice
