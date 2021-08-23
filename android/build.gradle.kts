@@ -21,7 +21,6 @@ dependencies {
     implementation("androidx.core:core-ktx:1.6.0")
     implementation("androidx.activity:activity-compose:1.3.1")
     implementation("com.google.android.material:material:1.4.0")
-
 }
 
 android {

@@ -8,11 +8,9 @@ pluginManagement {
 }
 rootProject.name = "terminus"
 
-
 include(":core")
 include(":mobile")
 include(":android")
 include(":desktop")
 include(":web")
 include(":kchia")
-

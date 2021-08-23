@@ -23,7 +23,7 @@ plugins {
     id("org.jlleitschuh.gradle.ktlint") version "10.1.0"
 }
 
-subprojects {
+allprojects {
     repositories {
         google()
         mavenCentral()
@@ -31,25 +31,38 @@ subprojects {
     }
 }
 
-detekt {
-    buildUponDefaultConfig = true // preconfigure defaults
-    allRules = false // activate all available (even unstable) rules.
-    // point to your custom config defining rules to run, overwriting default behavior
-    config = files("../config/detekt.yml")
-    // a way of suppressing issues before introducing detekt
-    baseline = file("../config/baseline.xml")
+subprojects {
+    apply(plugin = "org.jlleitschuh.gradle.ktlint") // Version should be inherited from parent
+    apply(plugin = "io.gitlab.arturbosch.detekt")
 
-    reports {
-        html.enabled = true // observe findings in your browser with structure and code snippets
-        xml.enabled = true // checkstyle like format mainly for integrations like Jenkins
-        txt.enabled = true
-        // similar to the console output, contains issue signature to manually edit baseline files
-        sarif.enabled = true
-        // standardized SARIF format (https://sarifweb.azurewebsites.net/) to support integrations with Github Code Scanning
+    dependencies {
+        detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.18.0")
     }
-}
 
-tasks.withType<io.gitlab.arturbosch.detekt.Detekt>().configureEach {
-    // Target version of the generated JVM bytecode. It is used for type resolution.
-    jvmTarget = "1.8"
+    configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+        debug.set(true)
+    }
+
+    detekt {
+        buildUponDefaultConfig = true // preconfigure defaults
+        allRules = true // activate all available (even unstable) rules.
+        // point to your custom config defining rules to run, overwriting default behavior
+        config = files("../config/detekt.yml")
+        // a way of suppressing issues before introducing detekt
+        baseline = file("../config/baseline.xml")
+
+        reports {
+            html.enabled = true // observe findings in your browser with structure and code snippets
+            xml.enabled = true // checkstyle like format mainly for integrations like Jenkins
+            txt.enabled = true
+            // similar to the console output, contains issue signature to manually edit baseline files
+            sarif.enabled = true
+            // standardized SARIF format (https://sarifweb.azurewebsites.net/) to support integrations with Github Code Scanning
+        }
+    }
+
+    tasks.withType<io.gitlab.arturbosch.detekt.Detekt>().configureEach {
+        // Target version of the generated JVM bytecode. It is used for type resolution.
+        jvmTarget = "1.8"
+    }
 }

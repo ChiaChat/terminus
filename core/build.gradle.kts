@@ -2,7 +2,6 @@ plugins {
     kotlin("multiplatform")
 }
 
-
 group = "org.chiachat.terminus"
 version = "1.0"
 

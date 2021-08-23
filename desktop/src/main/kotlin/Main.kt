@@ -16,9 +16,11 @@ fun main() = singleWindowApplication {
     var text by remember { mutableStateOf("Hello, World!") }
 
     MaterialTheme {
-        Button(onClick = {
-            text = "Hello ${Platform.getPlatform()}"
-        }) {
+        Button(
+            onClick = {
+                text = "Hello ${Platform.getPlatform()}"
+            }
+        ) {
             Text(text)
         }
     }
