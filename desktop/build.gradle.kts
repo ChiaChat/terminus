@@ -11,8 +11,8 @@ group = "org.chiachat.terminus"
 version = "0.0.1"
 
 dependencies {
+    api(project(":core"))
     implementation(compose.desktop.currentOs)
-    implementation(project(":core"))
     testImplementation(kotlin("test"))
 }
 

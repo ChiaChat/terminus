@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
+
 // Add compose gradle plugin
 plugins {
     kotlin("multiplatform")
@@ -22,4 +24,9 @@ kotlin {
             }
         }
     }
+}
+
+
+rootProject.plugins.withType(org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin::class.java) {
+    rootProject.the<NodeJsRootExtension>().versions.webpackDevServer.version = "4.0.0-rc.0"
 }
