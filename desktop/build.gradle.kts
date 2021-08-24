@@ -7,7 +7,7 @@ plugins {
     id("org.jetbrains.compose")
 }
 
-group = "org.chiachat.terminus"
+group = "org.chiachat"
 version = "1.0.0"
 
 dependencies {

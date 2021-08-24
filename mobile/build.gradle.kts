@@ -6,7 +6,7 @@ plugins {
     id("kotlin-android-extensions")
 }
 
-group = "org.chiachat.terminus"
+group = "org.chiachat"
 version = "1.0"
 
 kotlin {
