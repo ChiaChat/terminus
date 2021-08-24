@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "org.chiachat.terminus"
-version = "0.0.1"
+version = "1.0.0"
 
 dependencies {
     api(project(":core"))
