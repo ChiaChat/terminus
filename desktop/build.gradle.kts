@@ -24,13 +24,23 @@ tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "16"
 }
 
+val resources = "src/main/resources"
 compose.desktop {
     application {
         mainClass = "MainKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "desktop"
+            packageName = "Terminus"
             packageVersion = "1.0.0"
+            linux {
+                iconFile.set(project.file("$resources/icons/snitch.png"))
+            }
+            macOS {
+                iconFile.set(project.file("$resources/icons/snitch.icns"))
+            }
+            windows {
+                iconFile.set(project.file("$resources/icons/snitch.ico"))
+            }
         }
     }
 }
