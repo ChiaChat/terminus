@@ -23,6 +23,6 @@ jobs:
           configuration-cache-enabled: true
       - uses: softprops/action-gh-release@v1
         with:
-          files: desktop/build/compose/binaries/main/*.dmg
+          files: desktop/build/compose/binaries/main/dmg/*.dmg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

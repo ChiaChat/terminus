@@ -24,7 +24,7 @@ jobs:
       - uses: softprops/action-gh-release@v1
         with:
           files: |
-            desktop/build/compose/binaries/main/*.deb
+            desktop/build/compose/binaries/main/deb/*.deb
             LICENSE
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
