@@ -3,6 +3,7 @@ buildscript {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30")
         classpath("org.jetbrains.compose:compose-gradle-plugin:1.0.0-alpha4-build328")
         classpath("com.android.tools.build:gradle:7.0.1")
+        classpath("com.chaquo.python:gradle:9.1.0")
     }
 }
 
