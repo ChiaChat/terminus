@@ -1,17 +1,8 @@
 buildscript {
-
-    repositories {
-        gradlePluginPortal()
-        google()
-        mavenCentral()
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-    }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21")
-        classpath("org.jetbrains.compose:compose-gradle-plugin:1.0.0-alpha4-build318")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30")
+        classpath("org.jetbrains.compose:compose-gradle-plugin:1.0.0-alpha4-build328")
         classpath("com.android.tools.build:gradle:7.0.1")
-        classpath("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.18.0")
-        classpath("org.jlleitschuh.gradle:ktlint-gradle:10.1.0")
     }
 }
 
@@ -27,6 +18,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven("https://jitpack.io")
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
