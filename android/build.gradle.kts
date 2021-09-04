@@ -5,9 +5,6 @@ plugins {
     kotlin("android")
 }
 
-group = "org.chiachat"
-version = "1.0.0"
-
 dependencies {
     implementation(project(":core"))
     implementation(compose.desktop.currentOs)

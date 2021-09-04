@@ -1,3 +1,0 @@
-[submodule "kchia"]
-	path = kchia
-	url = git@github.com:chiachat/kchia.git

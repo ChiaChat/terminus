@@ -2,13 +2,10 @@ buildscript {
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30")
         classpath("org.jetbrains.compose:compose-gradle-plugin:1.0.0-alpha4-build328")
-        classpath("com.android.tools.build:gradle:7.0.1")
-        classpath("com.chaquo.python:gradle:9.1.0")
+        classpath("com.android.tools.build:gradle:4.2.0")
     }
 }
 
-group = "org.chiachat"
-version = "1.0"
 
 plugins {
     id("io.gitlab.arturbosch.detekt") version "1.18.0"
@@ -16,6 +13,8 @@ plugins {
 }
 
 allprojects {
+    group = "org.chiachat"
+    version = "1.0"
     repositories {
         google()
         mavenCentral()
@@ -32,9 +31,9 @@ subprojects {
         detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.18.0")
     }
 
-    configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
-        debug.set(true)
-    }
+//    configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+//        debug.set(true)
+//    }
 
     detekt {
         buildUponDefaultConfig = true // preconfigure defaults

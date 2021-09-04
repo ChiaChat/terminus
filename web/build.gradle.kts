@@ -6,9 +6,6 @@ plugins {
     id("org.jetbrains.compose")
 }
 
-group = "org.chiachat"
-version = "1.0"
-
 // Enable JS(IR) target and add dependencies
 kotlin {
     js(IR) {

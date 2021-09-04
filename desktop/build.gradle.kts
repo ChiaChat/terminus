@@ -7,11 +7,8 @@ plugins {
     id("org.jetbrains.compose")
 }
 
-group = "org.chiachat"
-version = "1.0.0"
-
 dependencies {
-    api(project(":core"))
+    implementation(project(":core"))
     implementation(compose.desktop.currentOs)
     testImplementation(kotlin("test"))
 }
@@ -24,10 +21,10 @@ tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "16"
 }
 
-val resources = "src/main/resources"
+val resources = "src/org.chiachat.terminus.desktop.main/resources"
 compose.desktop {
     application {
-        mainClass = "MainKt"
+        mainClass = "org.chiachat.terminus.desktop.MainKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "Terminus"
